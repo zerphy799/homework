@@ -19,6 +19,10 @@ public class Bike {
     }
 
     public void setBatterylevel(int batterylevel) {
+        if(batterylevel < 0||batterylevel > 100){
+            System.out.println("Batterylevel must be between 0 and 100");
+            return;
+        }
         this.batterylevel = batterylevel;
     }
 

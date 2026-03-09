@@ -5,5 +5,7 @@ public static void main(String[] args) {
     Bike newBike = new Bike(85,"123456",true,42.2);
     newBike.printBikeDetails();
     newBike.ride();
+
 }
+
 }
