@@ -48,9 +48,12 @@ public class Bike {
     public void ride(){
         if(isAvailable&&batterylevel>0&&batterylevel<100){
             System.out.println("ID:"+bikeId+" this bike is available");
+        }else{
+            System.out.println("ID:"+bikeId+" this bike is not available");
         }
     }
     public void printBikeDetails(){
         System.out.println("ID:"+bikeId+"\nbatterylevel:"+batterylevel+"\nisavailable:"+isAvailable+"\nkmDriven:"+kmDriven+"km");
     }
+
 }
