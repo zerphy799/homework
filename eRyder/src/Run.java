@@ -11,5 +11,4 @@ public static void main(String[] args) {
     newBike.printRideDetails(15);
     newBike.ride();
 }
-
 }
