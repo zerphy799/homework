@@ -13,7 +13,7 @@ public class Feedback {
     }
 
     public void analyseFeedback(boolean isConcatenation, String sent1, String sent2, String sent3, String sent4, String sent5) {
-        if (isConcatenation = true) {
+        if (isConcatenation) {
             completeFeedback = feedbackUsingConcatenation(sent1, sent2, sent3, sent4, sent5);
             longFeedback = checkFeedbackLength(completeFeedback);
             reviewId = createReviewId(firstName, lastName, completeFeedback);

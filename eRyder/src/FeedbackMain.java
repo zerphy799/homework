@@ -13,8 +13,9 @@ public class FeedbackMain {
         System.out.println("--------------");
         System.out.println("Time taken to analyse feedback is: " + (l1 - l)+"ms"+"\n---------------------");
         long l2 = System.currentTimeMillis();
-        feedback.analyseFeedback(false, sent1, sent2, sent3, sent4, sent5);
-        System.out.println(feedback);
+        Feedback feedback1=new Feedback("Rob", "Xinpusen", "46556688@123.com");
+        feedback1.analyseFeedback(false, sent1, sent2, sent3, sent4, sent5);
+        System.out.println(feedback1);
         long l3 = System.currentTimeMillis();
         System.out.println("--------------");
         System.out.println("Time taken to analyse feedback is: " + (l3 - l2)+"ms"+"\n---------------------");
