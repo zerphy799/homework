@@ -7,6 +7,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="mvn-demo" />
+        <module name="graded-exercise-one" />
       </profile>
     </annotationProcessing>
   </component>

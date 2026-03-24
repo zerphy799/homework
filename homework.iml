@@ -3,8 +3,17 @@
   <component name="NewModuleRootManager" inherit-compiler-output="true">
     <exclude-output />
     <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/prog-2-2026-graded-exercise-1-zerphy799" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/prog-2-2026-graded-exercise-1-zerphy799/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/prog-2-2026-graded-exercise-1-zerphy799/src/main" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/prog-2-2026-graded-exercise-1-zerphy799/src/main/java" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/prog-2-2026-graded-exercise-1-zerphy799/target" isTestSource="false" />
+      <excludeFolder url="file://$MODULE_DIR$/prog-2-2026-graded-exercise-1-zerphy799/src/test/java/com/example/graded" />
+      <excludeFolder url="file://$MODULE_DIR$/prog-2-2026-graded-exercise-1-zerphy799/src/test/java/com/example/graded/exercise" />
+      <excludeFolder url="file://$MODULE_DIR$/prog-2-2026-graded-exercise-1-zerphy799/src/test/java/com/example/graded/exercise/one" />
     </content>
+    <content url="file://$MODULE_DIR$/prog-2-2026-graded-exercise-1-zerphy799/target" />
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
