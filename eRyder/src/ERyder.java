@@ -1,5 +1,5 @@
 
-public class Bike {
+public class ERyder {
     private String bikeId;
     private int batterylevel;
     private boolean isAvailable;
@@ -11,7 +11,7 @@ public class Bike {
     private final String linked_PhoneNumber;
     private double total_Fare;
     private int totalUsageINMinutes;
-    public Bike(int batterylevel, String bikeId, boolean isAvailable, double kmDriven) {
+    public ERyder(int batterylevel, String bikeId, boolean isAvailable, double kmDriven) {
         this.batterylevel = batterylevel;
         this.bikeId = bikeId;
         this.isAvailable = isAvailable;
@@ -20,7 +20,7 @@ public class Bike {
         this.linked_PhoneNumber = "184"+ (int) (Math.random() * 10000000);
     }
 
-    public Bike(int batterylevel, String bikeId, boolean isAvailable, double kmDriven,String linked_Account, String linked_PhoneNumber) {
+    public ERyder(int batterylevel, String bikeId, boolean isAvailable, double kmDriven, String linked_Account, String linked_PhoneNumber) {
         this.batterylevel = batterylevel;
         this.linked_Account = linked_Account;
         this.linked_PhoneNumber = linked_PhoneNumber;

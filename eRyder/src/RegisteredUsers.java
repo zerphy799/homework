@@ -181,6 +181,7 @@ private void removeRegisteredUsers() {
             Scanner scanner = new Scanner(System.in);
             String email=scanner.next();
             boolean b = registeredUsers.removeIf(registeredUser -> registeredUser.getEmailAddress().equals(email));
+
             if(b){
                 System.out.println("Remove successful");
             }else System.out.println("Remove failed");

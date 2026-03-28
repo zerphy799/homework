@@ -23,7 +23,7 @@ public class UserRegistration {
     private boolean cardNumberValid=false;
     private boolean validCVV=false;
     private boolean cardStillValid=false;
-    public void registration(){
+    public  void registration(){
         while(true) {
             System.out.println("Welcome to the ERyder Registration.\n" +
                     "Here are your two options:\n" +
