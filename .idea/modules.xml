@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/checkString/checkString.iml" filepath="$PROJECT_DIR$/checkString/checkString.iml" />
       <module fileurl="file://$PROJECT_DIR$/eRyder/eRyder.iml" filepath="$PROJECT_DIR$/eRyder/eRyder.iml" />
       <module fileurl="file://$PROJECT_DIR$/homework.iml" filepath="$PROJECT_DIR$/homework.iml" />
       <module fileurl="file://$PROJECT_DIR$/test/test.iml" filepath="$PROJECT_DIR$/test/test.iml" />
