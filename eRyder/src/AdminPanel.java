@@ -1,48 +1,63 @@
+import java.util.Scanner;
+import java.util.Spliterator;
+
 public class AdminPanel {
     public static void main(String[] args) {
-       testBikeRentalSystem();
+        System.out.println("Welcome Admin Panel");
+        int choice=1;
+        Scanner sc=new Scanner(System.in);
+        while(choice!=0){
+            System.out.println("1: userService"+
+                    "\n2:bikeService"+"\n3:rentalService");
+            choice=sc.nextInt();
+            switch(choice){
+                case 1:UserService.userService();break;
+                case 2:
+                    int choice2=6;
+                    BikeService bikeService=new BikeService();
+                    while(choice2!=0){
+                        System.out.println("1: Find available bikes"+"\n2:Validate location"+"\n3:Reserve Bike"+
+                                "\n4:release bike"+"\n0:return last system");
+                        switch(choice2){
+                            case 1:bikeService.viewActiveRentals();break;
+                            case 2:
+                                System.out.println("Enter location:");
+                                String location=sc.next();
+                                bikeService.validateLocation(location);break;
+                            case 3:
+                                System.out.println("Enter bikeId");
+                                String bikeId=sc.next();
+                                bikeService.reserverBike(bikeId);break;
+                            case 4:
+                                System.out.println("Enter rentalId");
+                                String rentalId=sc.next();
+                                bikeService.removeTrip(rentalId);break;
+                        }
+                    }break;
+                case 3: RentalService rentalService=new RentalService();
+                int choice3=6;
+                while(choice3!=0){
+                    System.out.println("1:start rental"+"\n2:End rental"+"\n3:track active bike"+"\n0:return last system");
+                    choice3=sc.nextInt();
+                    switch(choice3){
+                      case 1:  System.out.println("Enter BikeID");
+                        String startBikeId=sc.next();
+                        rentalService.startRental(startBikeId);break;
+                      case 2:  System.out.println("Enter RentalID");
+                      String startRentalId=sc.next();
+                      rentalService.endRental(startRentalId);break;
+                      case 3:
+                      rentalService.trackActiveRentals();break;
+                    }
+                }break;
+
+            }
+
+
+
+
+
+        }
     }
-    public static void testFeedBack(){
-        Feedback feedback = new Feedback("Tom", "Xinpusen", "4668884@123.com");
-        String sent1 = "I was very satisfied with the service.", sent2 = "The e-Bike is quite comfortable to ride.", sent3 = "The battery life of the e-Bike is impressive.",
-                sent4 = "The customer support was helpful and responsive.",
-                sent5 = "I would recommend this e-Bike to my friends and family.";
-        long l = System.currentTimeMillis();
-        feedback.analyseFeedback(true, sent1, sent2, sent3, sent4, sent5);
-        System.out.println(feedback);
-        long l1 = System.currentTimeMillis();
-        System.out.println("--------------");
-        System.out.println("Time taken to analyse feedback is: " + (l1 - l)+"ms"+"\n---------------------");
-        long l2 = System.currentTimeMillis();
-        Feedback feedback1=new Feedback("Rob", "Xinpusen", "46556688@123.com");
-        feedback1.analyseFeedback(false, sent1, sent2, sent3, sent4, sent5);
-        System.out.println(feedback1);
-        long l3 = System.currentTimeMillis();
-        System.out.println("--------------");
-        System.out.println("Time taken to analyse feedback is: " + (l3 - l2)+"ms"+"\n---------------------");
-    }
-    public static void testUserRegistration(){
-        UserRegistration userRegistration = new UserRegistration();
-        userRegistration.registration();
-    }
-    public static void testResgisteredUser(){
-        RegisteredUsers re=new RegisteredUsers();
-        re.userManagementOption();
-    }
-    public static void testERyder(){
-        ERyder ERyder = new ERyder(64,"123555",true,56.2);
-        ERyder.printBikeDetails();
-        System.out.println("-------------------");
-        ERyder.printRideDetails(32);
-        System.out.println("------------------");
-        ERyder newERyder = new ERyder(85,"123456",true,42.2,"411681","18351992562");
-        newERyder.printBikeDetails();
-        System.out.println("-----------------");
-        newERyder.printRideDetails(15);
-        newERyder.ride();
-    }
-    public static void testBikeRentalSystem(){
-        BikeRental bikeRental = new BikeRental();
-        bikeRental.simulateApplicationInput();
-    }
+
 }
