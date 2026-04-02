@@ -31,6 +31,7 @@ public class BikeService {
                         "to locate the bike and start your pleasant journey.");
                 ActiveRental activeRental = new ActiveRental(bikeID,emailAddress,tripStartTime);
                 activeRentalsList.add(activeRental);
+             BikeRequest.addRequest(emailAddress, location);
             }});
         }else System.out.println("Sorry, no bikes are available at the location you");
     }

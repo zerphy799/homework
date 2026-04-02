@@ -27,6 +27,7 @@ public class RentalService {
             if (Bike.getBikeID().equals(bikeID)) {
                 Bike.setAvailable(true);
                 System.out.println(" Your trip has ended. Thank you for riding with us.");
+                ERyderLog.pushLog(bikeID,"endRental");
             }
         });
     }
@@ -40,6 +41,7 @@ public class RentalService {
                         "to locate the bike and start your pleasant journey.");
                 ActiveRental activeRental = new ActiveRental(bikeID,emailAddress,tripStartTime);
                 activeRentalsList.add(activeRental);
+                ERyderLog.pushLog(bikeID,"Rental Started");
             }});
         }else System.out.println("Sorry, no bikes are available at the location you");
     }

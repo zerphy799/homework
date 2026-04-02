@@ -1,3 +1,4 @@
+import java.time.LocalDateTime;
 import java.util.Scanner;
 import java.util.Spliterator;
 
@@ -42,7 +43,8 @@ public class AdminPanel {
                     switch(choice3){
                       case 1:  System.out.println("Enter BikeID");
                         String startBikeId=sc.next();
-                        rentalService.startRental(startBikeId);break;
+                        rentalService.startRental(startBikeId);
+                        break;
                       case 2:  System.out.println("Enter RentalID");
                       String startRentalId=sc.next();
                       rentalService.endRental(startRentalId);break;
@@ -50,8 +52,36 @@ public class AdminPanel {
                       rentalService.trackActiveRentals();break;
                     }
                 }break;
+                case 4: ERyderLog.viewSystemLogs();break;
+                case 5:
+                    int choice5=6;
+                    while(choice5!=0) {
+                        System.out.println("1. Add Bike Request");
+                        System.out.println("2. View Pending Requests");
+                        System.out.println("3. Remove First Request");
+                        System.out.println("0: exit");
+                        choice5=sc.nextInt();
+                    switch(choice5) {
+                        case 1:
+                            System.out.print("Enter user email: ");
+                            String email = sc.nextLine();
+                            System.out.print("Enter location: ");
+                            String loc = sc.nextLine();
+                            BikeRequest.addRequest(email,loc);
+                            System.out.println("Request added successfully!");
+                            break;
 
-            }
+                        case 2:
+                            BikeRequest.viewQueue();
+                            break;
+
+                        case 3:
+                            BikeRequest.removeFirstRequest();
+                            break;
+
+                    }
+                    }
+                    }
 
 
 
