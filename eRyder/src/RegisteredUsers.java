@@ -77,8 +77,9 @@ public class RegisteredUsers {
     public void setUserType(String userType) {
         this.userType = userType;
     }
-
-    public RegisteredUsers(String cardExpiryDate, String cardNumber, String cardProvider, String cvv, String dateOfBirth, String emailAddress, String fullName, String userType) {
+    public RegisteredUsers(String userType, String fullName, String emailAddress,
+                                       String dateOfBirth, String cardNumber, String cardProvider,
+                                       String cardExpiryDate, String cvv) {
         this.cardExpiryDate = cardExpiryDate;
         this.cardNumber = cardNumber;
         this.cardProvider = cardProvider;
@@ -87,7 +88,15 @@ public class RegisteredUsers {
         this.emailAddress = emailAddress;
         this.fullName = fullName;
         this.userType = userType;
+        RegisteredUsers newUser;
+        if (userType.equalsIgnoreCase("VIP")) {
+            newUser = new VIPUser(fullName, emailAddress, dateOfBirth, cardNumber, cardProvider, cardExpiryDate, cvv, userType);
+        } else {
+            newUser = new RegularUser(fullName, emailAddress, dateOfBirth, cardNumber, cardProvider, cardExpiryDate, cvv, userType);
+        }
+        System.out.println("用户创建成功：" + fullName + "，用户类型：" + userType);
     }
+
 
     public RegisteredUsers() {
     }
@@ -219,4 +228,10 @@ private void updateRegisteredUsers() {
             });
         }
 }
+    public double calculateFare(double baseFare) {
+        return baseFare;
+    }
+    public void displayUserType() {
+        System.out.println("Regular User");
+    }
 }
